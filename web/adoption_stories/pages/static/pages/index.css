@@ -1,0 +1,571 @@
+@font-face {
+  font-family: notoSerif;
+  src: url('NotoSerif-Regular.ttf');
+}
+
+p, button, a, h1, h2, h3, a, h4, h5, h6, input, span {
+    font-family: notoSerif, Palatino, "Palatino Linotype", serif, "SimSun", "STHeiti Light", "华文细黑", "宋体";
+}
+
+a {
+    color: #E64C3B;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+}
+
+.otherLanguagePromptContainer {
+    position: absolute;
+    height: 25px;
+    top: 0;
+    right: 20px;
+}
+
+.otherLanguagePromptContainer::before {
+    content : "";
+    position: absolute;
+    left    : 5%;
+    bottom  : 0;
+    height  : 2px;
+    border-bottom: 2px solid #E64C3B;
+    padding-bottom: 5px;
+    width: 90%;
+}
+
+.adminLinkContainer {
+    position: absolute;
+    height: 25px;
+    top: 0;
+    left: 20px;
+}
+
+.adminLinkContainer::before {
+    content : "";
+    position: absolute;
+    left    : 5%;
+    bottom  : 0;
+    height  : 2px;
+    border-bottom: 2px solid #E64C3B;
+    padding-bottom: 5px;
+    width: 90%;
+}
+
+.promptTitle::after, .whoWeAreTitle::after {
+    content: "";
+    position: absolute;
+    left: 36%;
+    height: 40px;
+    border-bottom: 2px solid #E54A3B;
+    width: 28%;
+}
+
+.otherLanguagePromptContainer a {
+    margin: 0 auto;
+}
+
+
+.button {
+    cursor: pointer;
+    font-size: 18px;
+    height: 55px;
+    width: 200px;
+    background-color: #FFF;
+    color: #E64C3B;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, .1);
+    text-align: center;
+    border: 2px solid #E64C3B;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.button.active {
+    background-color: #E64C3B;
+    color: #FFF;
+}
+
+.button:hover {
+    background-color: #EBF0F0;
+    /*box-shadow: none;*/
+}
+
+.headerRow .button {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 25px;
+}
+
+.buttonContainer {
+    margin: 0 0 50px;
+    text-align: center;
+}
+
+.buttons {
+    display: inline-block;
+}
+
+.summaryRow {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.summaryContainer {
+    text-align: center;
+}
+
+.summaryContainer p {
+    text-align: center;
+    display: inline-block;
+    max-width: 490px;
+}
+
+.story-card {
+    background: #FFFFFF;
+    box-shadow: 3px 3px 1px rgba(0, 0, 0, .1);
+    height: 400px;
+    overflow: hidden;
+}
+
+#front-page-header {
+    margin-top: 22px;
+    margin-bottom: 12px;
+}
+
+#header-bottom-row {
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 33px;
+}
+
+.logoSwitchLinkContainer {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logoSwitchLinkContainer a {
+    float: right;
+}
+
+.logo {
+    max-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header-bottom-row p {
+    line-height: 2;
+}
+
+#header-bottom-row button {
+    margin-left: 4px;
+    margin-bottom: 16px;
+}
+
+.story-card h2, .story-card h3 {
+    margin-top: 10px;
+}
+
+.story-card img {
+    width: 100%;
+    border-width: 2px;
+    border-style: none none solid none;
+    border-color: #E64C3B;
+}
+
+.story-container {
+    overflow: hidden;
+    margin: 13px auto 0;
+    width: 90%;
+    padding-top: 12px;
+    border-style: solid none none;
+    border-color: #ddd;
+    border-width: 2px;
+}
+
+.story-text {
+    font-size: 14px;
+}
+
+.story-card {
+    position: relative;
+}
+
+.detail-link-container {
+    position: absolute;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+}
+
+.detail-link {
+    position: absolute;
+    bottom: 10px;
+    right: 24px;
+}
+
+.ReactModal__Overlay {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.ReactModal__Content {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+}
+
+.modal-content {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.detail-modal .adopteeName h2 {
+    margin-top: 26px;
+    margin-bottom: 0;
+}
+
+.detail-modal .adopteeName h3 {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.detail-modal .adopteeName {
+    margin: 0 10px;
+    padding-bottom: 15px;
+}
+
+.detail-modal .storyTeller, .about-modal .about-person {
+    margin: 0 10px;
+}
+
+.detail-modal .storyTeller, .about-modal .about-person {
+    border-top: 1px solid #ddd;
+}
+
+.detail-modal .storyTeller.middle, .modal-content .storyTeller.last,
+.about-modal .about-person.middle, .about-modal .about-person.last{
+    padding-top: 5px;
+}
+
+.detail-modal .storyTeller.first, .modal-content .storyTeller.middle,
+.about-modal .about-person.first, .about-modal .about-person.middle{
+    padding-bottom: 20px;
+}
+
+.about-modal .about-person.first {
+    border-top: none;
+}
+
+#close-button {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+}
+
+#continueButton {
+    margin-bottom: 15px;
+}
+
+.storyTeller h2, .about-person h2 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.storyTeller h3, .about-person h3 {
+    margin-top: 0;
+}
+
+.detail-modal h4 {
+    color: #999;
+}
+
+.detail-modal h3, .about-modal h3 {
+    color: #999;
+}
+
+.detail-modal h2, .about-modal h2 {
+    color: #333;
+}
+
+.media-container .media-caption {
+    float: right;
+}
+
+.socialContainer {
+    margin: 10px auto;
+    height: 50px;
+    width: 110px;
+}
+
+.socialContainer .socialButton {
+    float: left;
+}
+
+.twitterButton, .facebookButton {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.socialShareStory {
+    height: 50px;
+}
+
+.socialShareStory .socialButton, .socialShareStory span {
+    position: fixed;
+    bottom: 45px;
+}
+.socialShareStory .twitterButton {
+    right: 45px;
+}
+.socialShareStory .facebookButton {
+    right: 105px;
+}
+.socialShareStory span {
+    right: 110px;
+}
+
+@media (max-width: 768px) {
+    .socialShareStory {
+        color: #999;
+        width: 100%;
+    }
+    .socialShareStory .socialButton, .socialShareStory span {
+        position: fixed;
+    }
+    .socialShareStory .twitterButton {
+        right: 15px;
+        bottom: 15px;
+    }
+    .socialShareStory .facebookButton {
+        right: 75px;
+        bottom: 15px;
+    }
+    .socialShareStory span {
+        right: 130px;
+        bottom: 25px;
+    }
+}
+
+.socialShareStory span {
+    font-style: italic;
+    color: #999;
+    font-size: 14px;
+}
+
+.twitterButton {
+    background-image: url('twitter.png');
+}
+
+.twitterButton:hover {
+    background-image: url('twitter-hover.png');
+}
+
+.twitterButton:active {
+    background-image: url('twitter-active.png');
+}
+
+.facebookButton {
+    background-image: url('facebook.png');
+}
+
+.facebookButton:hover {
+    background-image: url('facebook-hover.png');
+}
+
+.facebookButton:active {
+    background-image: url('facebook-active.png');
+}
+
+.x-icon {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    background-image: url('x-icon.png');
+}
+
+#close-row .x-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.8em;
+    z-index: 999999;
+}
+
+.x-icon:active, .x-icon:hover {
+    cursor: pointer;
+}
+
+.x-icon:hover {
+    background-image: url('x-icon-hover.png');
+}
+
+.x-icon:active {
+    background-image: url('x-icon-active.png');
+}
+
+.photo-container {
+    width:43%;
+    float:right;
+    margin: 0 0 10px 25px;
+}
+
+.photo-container .photo {
+    width: 100%;
+    max-height: 70vh;
+    border: 1px solid #e54a3b;
+    margin-bottom: 10px;
+}
+
+.photo-caption p, .media-caption p {
+    font-style: italic;
+    color: #999;
+    font-size: 14px;
+}
+
+.media-container .audio {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.adopteeName h3 {
+    margin-top: 0;
+}
+
+.adopteeName h2 {
+    margin-bottom: 5px;
+}
+
+.storyTeller h4 {
+    font-style: italic;
+
+}
+
+.media-container {
+    margin: 15px;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.adopteeListingDropdown {
+    background: #FFFFFF;
+    border: 1px solid #838383;
+    border-radius: 6px;
+    overflow: scroll;
+    max-height: 300px;
+}
+
+.adopteeListing {
+    height: 80px;
+    border-bottom: 1px solid;
+    border-bottom-color: #e6e6e6;
+    padding: 12px 5px;
+    cursor: pointer;
+}
+
+.adopteeListing:hover {
+    cursor: pointer;
+    background-color: #e6e6e6;
+}
+
+.adopteeListingName, .adopteeListingPhoto {
+    height: 85%;
+}
+
+.adopteeListingPhoto {
+    margin-right: 13px;
+}
+
+.adopteeListingPhoto img {
+    max-height: 100%;
+    float: right;
+}
+
+.adopteeListingName {
+    width: 65%;
+    display: inline;
+    float: left;
+    margin-left: 12px;
+}
+
+.adopteeListing h4 {
+    margin: 10px 0 0 0 !important;
+}
+
+.adopteeListing h3 {
+    margin: 0;
+}
+
+#hasNoOtherContentButton, #hasOtherContentButton,
+#dontProvideMultimediaButton, #provideMultimediaButton {
+    width: 110px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+#hasOtherContentButton, #provideMultimediaButton {
+    margin-right: 20px;
+}
+
+/* TODO: Come back in and do a real rather than hackey fix */
+.cke_notification {
+    display: none;
+}
+
+.tiny-tos {
+    font-size: 12px;
+}
+
+.front-page-card {
+    margin: 25px 0;
+}
+
+.front-page-card .adopteeName {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.promptTitle, .whoWeAreTitle {
+    text-align: center;
+}
+
+.promptTitle {
+    margin-bottom: 15px;
+}
+
+.whoWeAreTitle {
+    margin-bottom: 25px;
+    color: #333 !important;
+}
+
+.prompt-modal h4 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+.prompt-modal input {
+    border-radius: 0;
+    color: #999;
+    font-size: 18px;
+    clear: left;
+    width: 100%;
+    margin: 10px 0;
+}

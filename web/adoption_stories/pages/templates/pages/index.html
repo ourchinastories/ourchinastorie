@@ -1,0 +1,91 @@
+{% load i18n %}
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  {# Translators: The title of the site that shows up in the top of a browser or in a tab #}
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{% trans "Our China Stories" %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" charset="UTF-8"/>
+  <!-- TODO: Add shims for legacy browsers -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="{% static "pages/js/bootstrap.min.js" %}"></script>
+  <!-- TODO: Minify all this react stuff before hitting production -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/react-modal/0.3.0/react-modal.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/react-router/0.13.3/ReactRouter.js"></script>
+  {% get_current_language as LANGUAGE_CODE %}
+  <script type="text/javascript" src="{% url 'django.views.i18n.javascript_catalog' %}?language={{ LANGUAGE_CODE }}"></script>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="{% static "pages/css/bootstrap.min.css" %}">
+  <link rel="stylesheet" href="{% static "pages/index.css" %}">
+  <link rel="stylesheet" href="{% static "pages/css/china-stories.css" %}">
+  <link rel="icon" type="image/png" href="{% static "pages/icon.png" %}">
+   <!-- Custom Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+  <link href="{% static "pages/font-awesome/css/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script>
+    var language = "{{ LANGUAGE_CODE }}";
+    var ENGLISH = "en";
+    var ADMIN_URL = "{% url "admin:index" %}";
+    var ADOPTEE_LIST_ENDPOINT = "{% url "adopteeList" 999999999 %}";
+    var ADOPTEE_DETAIL_ENDPOINT = "{% url "adopteeDetail" 999999999 %}";
+    var ADOPTEE_SEARCH_ENDPOINT = "{% url "adopteeSearch" 999999999 %}";
+    var ADOPTEE_CREATE_ENDPOINT = "{% url "adopteeCreate" %}";
+    var CATEGORY_ENDPOINT = "{% url "categoryListAndCreate" %}";
+    var CK_EDITOR_URL = "{% static "pages/ckeditor/ckeditor.js" %}";
+    var STORYTELLER_ENDPOINT = "{% url "storytellerCreate" %}";
+    var PHOTO_UPLOAD_ENDPOINT = "{% url "photoCreate" %}";
+    var AUDIO_UPLOAD_ENDPOINT = "{% url "audioCreate" %}";
+    var VIDEO_UPLOAD_ENDPOINT = "{% url "videoCreate" %}";
+    var LOGO_LOCATION = "{% static "pages/logo.jpg" %}";
+    var EN_LOCATION = "{% static "pages/img/us.png" %}";
+    var CHINA_LOCATION = "{% static "pages/img/china.jpg" %}";
+    var X_ICON = "{% static "pages/x-icon.png" %}";
+    var ABOUT_PERSON_LIST_ENDPOINT = "{% url "aboutList" %}";
+    var PRIVACY_ENDPOINT = "";
+    var TERMS_LOCATION = "{% static "pages/terms.pdf" %}";
+    var DOMAIN = "http://ourchinastories.com";
+    $( document ).ready(function() {
+        var heightofnav = $('.navbar-inverse').outerHeight();
+        $('body').css('padding-top', (heightofnav + 10) +'px');
+        $('.nav a').on('click', function(){
+            $('.btn-navbar').click(); //bootstrap 2.x
+            $('.navbar-toggle').click() //bootstrap 3.x by Richard
+        });
+    });
+  </script>
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="Our China Stories" />
+	<meta property="og:description"   content="Since 1992, some 140,000 children have left China for homes in sixteen countries. Here, Chinese adoptees, their families and friends tell their stories." />
+	<meta property="og:image"         content="https://china-static.s3.amazonaws.com/pages/logo.jpg" />
+    
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72747702-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+<div id="root"></div>
+{{ sql }}
+<script src="{% static "pages/ReactScriptLoader.js" %}"></script>
+<script src="{% static "pages/Dropzone.js" %}"></script>
+<script src="{% static "pages/home.js" %}"></script>
+</body>
+</html>
